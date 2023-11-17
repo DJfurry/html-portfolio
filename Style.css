@@ -1,0 +1,232 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url('https://i.pinimg.com/564x/a1/8c/9b/a18c9b6783e3c0819f02e35943543aaf.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+}
+
+/* Features section styles */
+.features {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature i {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #62c74e;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* CTA section styles */
+.cta {
+    background-size: cover;
+    background: linear-gradient(to bottom, #9c9c9c, #000000);
+    background-position: center;
+    text-align: center;
+    padding: 100px;
+}
+
+.animated-text {
+    font-size: 36px;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Add this to your existing CSS code */
+.logo {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ... (Your existing CSS code) ... */
+
+/* Image grid styles */
+.image-grid {
+
+
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns */
+    grid-gap: 20px;
+    /* Spacing between images */
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: scale(1.1);
+    /* Apply a slight scale for the cut edges effect */
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1);
+    /* Remove the scale effect on hover */
+}
+
+/* Overlay text styles */
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    /* Center-align text */
+}
+
+.overlay-text h3 {
+    margin: 0;
+    /* Remove default margin for the header */
+    padding: 5px;
+    /* Add padding to the header */
+}
+
+.overlay-text p {
+    margin: 0;
+    /* Remove default margin for the paragraph */
+    padding: 5px;
+    /* Add padding to the paragraph */
+}
+
+.image-item:hover .overlay-text {
+    opacity: 1;
+}
+
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}

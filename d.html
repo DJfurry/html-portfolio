@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage Verse</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        /* CSS for the entire page */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ... (Your existing CSS code) ... */
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Hide all images by default */
+        .image-slide {
+            display: none;
+            text-align: center;
+            /* Center the image horizontally */
+        }
+
+        .image-slide img {
+            display: block;
+            margin: 0 auto;
+            /* Center the image within the slide */
+        }
+
+        /* Previous and Next buttons */
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        /* Caption text */
+        .caption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+        }
+
+        /* Add a fade animation to the images */
+        .image-slide.fade {
+            animation: fade 3s ease-in-out infinite;
+        }
+
+        @keyframes fade {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            25%,
+            75% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Voyage Verse</h1>
+            </div>
+            <ul>
+                <li><a href="Mainpage.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Your Travel Adventure</h2>
+        <p>Explore the world with us</p>
+        <a href="Form.html" class="btn">Book Now</a>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-globe"></i>
+            <h3>Global Destinations</h3>
+            <p>Discover amazing places worldwide.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-hiking"></i>
+            <h3>Adventure Tours</h3>
+            <p>Experience thrilling adventures.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-umbrella-beach"></i>
+            <h3>Relaxation</h3>
+            <p>Relax on beautiful beaches.</p>
+        </div>
+    </section>
+
+    <!-- Image slideshow section -->
+    <section class="slideshow-container">
+        <!-- Image 1 -->
+        <div class="image-slide fade">
+            <img src="https://i.pinimg.com/564x/d4/7b/93/d47b93afce756c402240314ab18dfcb1.jpg" alt="Amritsar">
+            <div class="caption">
+                <h3>Amritsar</h3>
+                <p>Amritsar is a city in the northern state of Punjab, India. It's known for its Golden Temple, a sacred
+                    Sikh shrine.</p>
+            </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="image-slide fade">
+            <img src="https://i.pinimg.com/564x/11/a2/c3/11a2c3d7a387f65aef559bd722553db5.jpg" alt="Taj Mahal">
+            <div class="caption">
+                <h3>Taj Mahal</h3>
+                <p>The Taj Mahal is an iconic white marble mausoleum located in Agra, Uttar Pradesh. It is a UNESCO
+                    World Heritage Site and one of the Seven Wonders of the World.</p>
+            </div>
+        </div>
+
+        <!-- Add more images and descriptions as needed -->
+
+        <!-- Previous and Next buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#8249;</a>
+        <a class="next" onclick="plusSlides(1)">&#8250;</a>
+    </section>
+
+    <!-- ... (The rest of your HTML code) ... -->
+
+    <section class="cta">
+        <h2>Ready to Start Your Journey?</h2>
+        <a href="#" class="btn">Book Now</a>
+    </section>
+    <script>
+        // Slideshow logic
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            const slides = document.querySelectorAll('.image-slide');
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            slides.forEach((slide) => {
+                slide.style.display = 'none';
+            });
+
+            slides[slideIndex - 1].style.display = 'block';
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Voyage Verse. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Voyage Verse</title>
+    <link rel="stylesheet" href="Styl.css">
+    <style>
+        /* Custom CSS for the contact page */
+        body {
+            background-image: url('https://i.pinimg.com/564x/a5/2d/d6/a52dd64b891ce4f38486e914df598862.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* Custom CSS for the contact page (you can reuse this from the previous response) */
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Include the navigation menu (same as in your main page) -->
+        <!-- You can reuse the navigation menu code from your main page here -->
+    </header>
+
+    <section class="contact">
+
+        <h2>Contact Us</h2>
+        <p>Have questions or need assistance with your travel plans? Reach out to us! We're here to help.</p>
+
+        <div class="contact-form">
+            <form action="process_contact_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Travel Company. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+.contact {
+
+    /* Replace 'path_to_your_image.jpg' with the actual path to your image file */
+    background-size: cover;
+    /* This makes the image cover the entire section */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-attachment: fixed;
+    /* Keeps the background fixed while scrolling */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
